@@ -208,6 +208,25 @@ h3 {
   padding: 26px;
 }
 
+.project-scroll {
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.project-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.project-scroll::-webkit-scrollbar-thumb {
+  background: #2a3d63;
+  border-radius: 999px;
+}
+
+.project-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 .project-meta {
   margin-top: 16px;
   display: grid;
@@ -356,6 +375,12 @@ h3 {
 
   .project-media {
     aspect-ratio: 16 / 9;
+  }
+
+  .project-scroll {
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
   }
 
   .footer-content {

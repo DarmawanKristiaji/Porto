@@ -350,21 +350,23 @@ function renderProjects() {
         </div>
         <div class="project-content">
           <h3>${escapeHtml(project.title)}</h3>
-          <p>${escapeHtml(project.summary)}</p>
-          <dl class="project-meta">
-            <div>
-              <dt>Background</dt>
-              <dd>${escapeHtml(project.background)}</dd>
-            </div>
-            <div>
-              <dt>Tujuan</dt>
-              <dd>${escapeHtml(project.goal)}</dd>
-            </div>
-            <div>
-              <dt>Tools</dt>
-              <dd>${escapeHtml(project.tools)}</dd>
-            </div>
-          </dl>
+          <div class="project-scroll">
+            <p>${escapeHtml(project.summary)}</p>
+            <dl class="project-meta">
+              <div>
+                <dt>Background</dt>
+                <dd>${escapeHtml(project.background)}</dd>
+              </div>
+              <div>
+                <dt>Tujuan</dt>
+                <dd>${escapeHtml(project.goal)}</dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>${escapeHtml(project.tools)}</dd>
+              </div>
+            </dl>
+          </div>
         </div>
       </article>
     `
