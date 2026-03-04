@@ -11,3 +11,4 @@ cv_extracted.txt
 *.log
 *.tmp
 *.bak
+.vercel
