@@ -1,0 +1,10 @@
+.git
+.github
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+cv_extracted.txt
+Resume_Darmawan Kristiaji ..pdf
+README.md

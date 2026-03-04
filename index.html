@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Nama Anda</title>
+    <meta name="theme-color" content="#07090f" />
+    <meta
+      name="description"
+      content="Website portfolio personal berisi profil, project, dan video demo."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://your-domain.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Portfolio | Darmawan Kristiaji" />
+    <meta property="og:description" content="Portfolio Business Data Analyst: projects, tools, dan media embed." />
+    <meta property="og:url" content="https://your-domain.com/" />
+    <meta property="og:image" content="https://your-domain.com/preview.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Portfolio | Darmawan Kristiaji" />
+    <meta name="twitter:description" content="Portfolio Business Data Analyst: projects, tools, dan media embed." />
+    <meta name="twitter:image" content="https://your-domain.com/preview.jpg" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="viewer">
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a class="logo" id="logoName" href="#home">Nama Anda</a>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#contact">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">PORTFOLIO 2026</p>
+            <h1 id="heroTitle"></h1>
+            <p class="lead" id="heroLead"></p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projects">Lihat Project</a>
+              <a class="btn btn-ghost" href="#contact">Hubungi Saya</a>
+            </div>
+          </div>
+
+          <aside class="hero-card">
+            <p class="small">Ringkasan</p>
+            <ul id="heroStats"></ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about" class="section section-muted">
+        <div class="container">
+          <p class="eyebrow">TENTANG SAYA</p>
+          <h2 id="aboutHeading"></h2>
+          <p id="aboutText"></p>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <p class="eyebrow">PROJECT</p>
+          <h2>Project Pilihan</h2>
+          <p class="section-intro">
+            Setiap project di bawah memuat video, background, tujuan, dan tools
+            yang digunakan.
+          </p>
+
+          <div class="project-list" id="projectList"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="container footer-content">
+        <div>
+          <h2>Mari berkolaborasi</h2>
+          <p id="contactEmail"></p>
+          <p id="contactSocial"></p>
+          <p id="contactPhone"></p>
+          <p id="contactLocation"></p>
+        </div>
+        <a class="btn btn-primary" id="contactButton" href="mailto:namaanda@email.com">Kirim Email</a>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <div id="toast" class="toast" aria-live="polite"></div>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Portfolio | Darmawan Kristiaji</title>
+    <meta name="description" content="Halaman admin untuk kelola konten portfolio." />
+    <meta name="theme-color" content="#07090f" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <link rel="canonical" href="https://your-domain.com/admin.html" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="admin">
+    <header class="site-header">
+      <div class="container nav-wrapper">
+        <a class="logo" id="logoName" href="index.html">Darmawan Kristiaji</a>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="index.html">Viewer</a></li>
+            <li><a href="index.html#projects">Project</a></li>
+            <li><a href="index.html#contact">Kontak</a></li>
+            <li><button class="btn btn-ghost" id="adminLogoutBtn" type="button">Logout</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section-muted">
+        <div class="container">
+          <p class="eyebrow">ADMIN CRUD</p>
+          <h2>Kelola Konten Portfolio</h2>
+          <p class="section-intro">
+            Halaman ini khusus admin. Semua perubahan akan langsung tersimpan dan tampil di halaman viewer.
+          </p>
+
+          <div class="admin-grid">
+            <article class="admin-card">
+              <h3>Profil</h3>
+              <form id="profileForm" class="form-grid">
+                <label>Nama Lengkap<input name="name" required /></label>
+                <label>Jabatan<input name="role" required /></label>
+                <label>Headline Hero<textarea name="heroHeadline" rows="2" required></textarea></label>
+                <label>Deskripsi Hero<textarea name="heroLead" rows="3" required></textarea></label>
+                <label>Stat 1<input name="stat1" required /></label>
+                <label>Stat 2<input name="stat2" required /></label>
+                <label>Stat 3<input name="stat3" required /></label>
+                <button class="btn btn-primary" type="submit">Update Profil</button>
+              </form>
+            </article>
+
+            <article class="admin-card">
+              <h3>Tentang</h3>
+              <form id="aboutForm" class="form-grid">
+                <label>Judul Tentang<input name="heading" required /></label>
+                <label>Deskripsi Tentang<textarea name="description" rows="5" required></textarea></label>
+                <button class="btn btn-primary" type="submit">Update Tentang</button>
+              </form>
+            </article>
+
+            <article class="admin-card">
+              <h3>Kontak</h3>
+              <form id="contactForm" class="form-grid">
+                <label>Email<input type="email" name="email" required /></label>
+                <label>LinkedIn / Social<input name="social" required /></label>
+                <label>Telepon<input name="phone" required /></label>
+                <label>Lokasi<input name="location" required /></label>
+                <button class="btn btn-primary" type="submit">Update Kontak</button>
+              </form>
+            </article>
+
+            <article class="admin-card admin-card-wide">
+              <h3>Project (Create / Update)</h3>
+              <form id="projectForm" class="form-grid">
+                <input type="hidden" name="id" />
+                <label>Judul Project<input name="title" required /></label>
+                <label>Deskripsi Singkat<textarea name="summary" rows="3" required></textarea></label>
+                <label>Background<textarea name="background" rows="3" required></textarea></label>
+                <label>Tujuan<textarea name="goal" rows="3" required></textarea></label>
+                <label>Tools (pisahkan koma)<input name="tools" required /></label>
+                <label>
+                  Tipe Media
+                  <select name="mediaType" required>
+                    <option value="youtube">YouTube</option>
+                    <option value="gdrive-video">Google Drive Video</option>
+                    <option value="gdrive-file">Google Drive PDF/Slide/File</option>
+                    <option value="embed-url">Embed URL Langsung</option>
+                  </select>
+                </label>
+                <label>
+                  URL Media / Share Link
+                  <input name="mediaUrl" required />
+                </label>
+                <div class="form-actions">
+                  <button class="btn btn-primary" type="submit">Simpan Project</button>
+                  <button class="btn btn-ghost" id="projectCancelBtn" type="button">Batal Edit</button>
+                </div>
+              </form>
+
+              <div class="project-admin-list" id="projectAdminList"></div>
+            </article>
+
+            <article class="admin-card admin-card-wide">
+              <h3>Data</h3>
+              <p class="section-intro">Gunakan tombol ini untuk backup, restore, atau reset data.</p>
+              <div class="form-actions">
+                <button class="btn btn-ghost" id="exportDataBtn" type="button">Export JSON</button>
+                <button class="btn btn-ghost" id="importDataBtn" type="button">Import JSON</button>
+                <button class="btn btn-ghost" id="resetDataBtn" type="button">Reset ke Default</button>
+              </div>
+              <input id="importDataInput" type="file" accept="application/json" hidden />
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js" defer></script>
+    <div id="toast" class="toast" aria-live="polite"></div>
+  </body>
+</html>
