@@ -93,6 +93,33 @@ Jika ingin stream log deployment/runtime:
 - Buka service di Railway → tab `Deployments` / `Logs`
 - Atau gunakan Railway CLI (`railway logs`) setelah login
 
+## Alternatif selain Railway
+
+### Opsi 1 — Vercel (paling cepat)
+
+File konfigurasi sudah tersedia: [vercel.json](vercel.json)
+
+Langkah:
+1. Login ke Vercel
+2. Klik `Add New...` → `Project`
+3. Import repo GitHub `DarmawanKristiaji/Porto`
+4. Framework: `Other` (static), lalu `Deploy`
+
+### Opsi 2 — Render
+
+File konfigurasi sudah tersedia: [render.yaml](render.yaml)
+
+Langkah:
+1. Login ke Render
+2. Klik `New +` → `Blueprint`
+3. Pilih repo GitHub `DarmawanKristiaji/Porto`
+4. Render akan membaca `render.yaml` dan deploy static site otomatis
+
+Kedua opsi di atas tetap mendukung:
+- Viewer: `index.html`
+- Admin: `admin.html`
+- Data CRUD via localStorage browser
+
 ## Production Checklist
 
 1. Ganti semua `https://your-domain.com` di:
